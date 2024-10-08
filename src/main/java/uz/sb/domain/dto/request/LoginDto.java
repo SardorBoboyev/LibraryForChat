@@ -1,4 +1,4 @@
-package uz.sb.domain.dto.response;
+package uz.sb.domain.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,12 +7,9 @@ import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 @Getter
-public class JwtResponse {
-
-    private String accessToken;
-
-    private String refreshToken;
-
+@Setter
+public class LoginDto {
+    private String username;
+    private String password;
 }

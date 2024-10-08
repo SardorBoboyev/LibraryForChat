@@ -7,12 +7,9 @@ import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 @Getter
-public class JwtResponse {
-
-    private String accessToken;
-
-    private String refreshToken;
-
+@Setter
+public class ChatServiceResponse extends BaseResponse {
+    private Long user1Id;
+    private Long user2Id;
 }

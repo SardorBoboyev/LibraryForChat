@@ -1,11 +1,10 @@
 plugins {
     id 'java'
-    id 'maven-publish'  // Applies the Maven Publish plugin
-
+    id 'maven-publish'
 }
 
 group = 'uz.sb'
-version = '1.0.3-snapshot'
+version = '1.0.1'
 
 java {
     toolchain {
@@ -23,8 +22,8 @@ publishing {
             from components.java
 
             pom {
-                name = 'Bank System Core'
-                description = 'this is core for our bank system project. It contains all the core logic and entities'
+                name = 'tst '
+                description = 'This is core for our bank system project. It contains all the core logic and entities.'
                 url = 'https://github.com/SardorBoboyev/LibraryForChat'
 
                 licenses {
@@ -36,13 +35,13 @@ publishing {
                 developers {
                     developer {
                         id = 'SardorBoboyev'
-                        name = 'Sardor Boboyev'
+                        name = 'SardorBoboyev'
                         email = 'boboyevsardor350@gmail.com'
                     }
                 }
                 scm {
                     connection = 'scm:git:git://github.com/SardorBoboyev/LibraryForChat.git'
-                    developerConnection = 'scm:git:ssh://github.com/your-repo-url.git'
+                    developerConnection = 'scm:git:ssh://github.com/SardorBoboyev/LibraryForChat.git'
                     url = 'https://github.com/SardorBoboyev/LibraryForChat'
                 }
             }
@@ -53,8 +52,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/SardorBoboyev/LibraryForChat")
             credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.token") ?: System.getenv("TOKEN")
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USER")
+                password = project.findProperty("gpr.token") ?: System.getenv("GITHUB_TOKEN")
             }
         }
     }
@@ -62,9 +61,9 @@ publishing {
 
 dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
-
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
 
+    implementation 'org.springframework.boot:spring-boot-starter-validation:3.3.4'
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }

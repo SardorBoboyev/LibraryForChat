@@ -8,7 +8,9 @@ import lombok.*;
 @Setter
 @Builder
 public class UserResponse {
-    private String name;
+
+    private String firstName;
+    private String lastName;
     private String username;
     private String phoneNumber;
 }

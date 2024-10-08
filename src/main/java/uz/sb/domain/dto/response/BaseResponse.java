@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public abstract class BaseResponse {
-protected Long id;
-protected LocalDateTime createdAt;
-protected LocalDateTime updatedAt;
+    protected Long id;
+    protected LocalDateTime createdAt;
+    protected LocalDateTime updatedAt;
 }
