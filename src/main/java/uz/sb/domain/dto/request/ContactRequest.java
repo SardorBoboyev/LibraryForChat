@@ -16,5 +16,5 @@ public class ContactRequest {
 
     private Long contactUserId;  // person to join contact
 
-    private String ContactName;
+    private String contactName;
 }
