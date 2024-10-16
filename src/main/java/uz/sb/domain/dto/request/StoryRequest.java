@@ -12,10 +12,6 @@ import lombok.Setter;
 
 public class StoryRequest {
     private Long userId;
-
     private String comment;
-
     private String mediaType;
-
-    private String contentUrl;
 }
